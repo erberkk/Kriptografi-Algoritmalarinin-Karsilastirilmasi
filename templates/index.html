@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kriptografik Algoritma Karşılaştırması</title>
+  <link rel="icon" href="{{ url_for('static', filename='icon-Photoroom.png') }}" type="image/png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #121212;
+      font-family: 'Poppins', sans-serif;
+      color: #e0e0e0;
+      line-height: 1.7;
+      padding-top: 20px;
+    }
+    .container {
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      padding: 30px 40px;
+      margin-top: 30px;
+      margin-bottom: 50px;
+      box-shadow: 0 12px 45px rgba(0,0,0,0.6);
+    }
+    h1, h2, h3, h4, h5 {
+      font-weight: 600;
+      color: #f2c94c;
+      margin-top: 1.5em;
+      margin-bottom: 0.8em;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1em;
+      margin-top: 0.5em;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .main-title-icon {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+    h3 {
+        border-bottom: 2px solid #f2c94c30;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+    }
+    #chart h5 {
+        text-align: center;
+        margin-top: 1.2rem;
+        margin-bottom: 0.6rem;
+        font-size: 1.3rem;
+    }
+
+    .nav-tabs {
+      border-bottom: 2px solid #383c44;
+      margin-bottom: 30px;
+    }
+    .nav-tabs .nav-link {
+      color: #a0a0a0;
+      font-weight: 500;
+      border: none;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 14px 22px;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      margin-right: 6px;
+      position: relative;
+      bottom: -2px;
+    }
+    .nav-tabs .nav-link:hover {
+      color: #ffffff;
+      background-color: #2a2e35;
+      transform: translateY(-2px);
+    }
+    .nav-tabs .nav-link.active {
+      background-color: #f2c94c;
+      color: #121212 !important;
+      font-weight: 700;
+      box-shadow: 0 -4px 12px rgba(242, 201, 76, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .card {
+      background-color: #282c34;
+      border: 1px solid #3a3f47;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 30px;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+    .card-header {
+      background-image: linear-gradient(135deg, #f2c94c 0%, #e6a900 100%); /* Kart başlığı için gradient */
+      color: #121212;
+      border-bottom: none;
+      border-top-left-radius: 11px;
+      border-top-right-radius: 11px;
+      padding: 18px 22px;
+    }
+    .card-header h5 { /* Kart içindeki h5'ler */
+      margin: 0;
+      color: #121212;
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+    .card-body p {
+      color: #c5c8ca;
+      font-size: 0.98rem;
+    }
+    .card-body p strong {
+        color: #e8eaed;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-bottom: 2.5rem;
+        background-color: #282c34;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      }
+      thead {
+        background-color: #f2c94c;
+      }
+      thead th {
+        color: #121212;
+        font-weight: 700;
+        padding: 20px 18px;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+      tbody tr {
+        background-color: #282c34;
+        border-bottom: 1px solid #3a3f47;
+        transition: background-color 0.25s ease;
+      }
+      tbody tr:last-child {
+        border-bottom: none;
+      }
+      tbody tr:nth-child(even) {
+        background-color: #2f333b;
+      }
+      tbody tr:hover {
+        background-color: rgba(242, 201, 76, 0.15);
+      }
+      tbody td {
+        padding: 18px;
+        color: #d0d0d0;
+        vertical-align: middle;
+      }
+
+    .btn-custom-primary {
+        background-image: linear-gradient(to right, #f2c94c 0%, #eab308 55%, #f2c94c 100%);
+        background-size: 220% auto;
+        color: #121212;
+        font-weight: 600;
+        padding: 12px 28px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.22);
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: inline-block;
+    }
+    .btn-custom-primary:hover {
+        background-position: right center;
+        color: #000000;
+        box-shadow: 0 8px 25px rgba(242, 201, 76, 0.45);
+        transform: translateY(-3px) scale(1.02);
+    }
+    .btn-custom-primary:active {
+        transform: translateY(-1px) scale(0.98);
+    }
+
+    .form-control {
+      background-color: #22252a;
+      color: #e0e0e0;
+      border: 1px solid #4a4e54;
+      border-radius: 8px;
+      padding: 12px 15px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .form-control:focus {
+      background-color: #282c34;
+      color: #f1f1f1;
+      border-color: #f2c94c;
+      box-shadow: 0 0 0 0.25rem rgba(242, 201, 76, 0.25);
+    }
+    .form-label {
+      color: #b0b0b0;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .chart-container { /* Canvas'ın sığacağı alan */
+      padding: 15px;
+      background-color: #282c34;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      height: 430px; /* Canvas için net yükseklik */
+      position: relative; /* Canvas konumlandırması için önemli */
+    }
+
+    .recommendation-text p {
+      text-align: justify;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+      color: #c5c8ca;
+    }
+    .recommendation-text strong {
+        color: #f2c94c;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 25px;
+      text-align: center;
+      color: #888;
+      border-top: 1px solid #333;
+    }
+
+    .animate-on-load {
+      opacity: 0;
+      animation: fadeInUp 0.8s 0.2s forwards;
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(25px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .tab-pane {
+        animation-duration: 0.6s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container animate-on-load">
+    <h1>
+      <img src="{{ url_for('static', filename='icon-Photoroom.png') }}" alt="Site İkonu" class="main-title-icon">
+      Kriptografik Algoritma Karşılaştırması
+    </h1>
+
+    <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="intro-tab" data-bs-toggle="tab" data-bs-target="#intro" type="button" role="tab" aria-controls="intro" aria-selected="true">Giriş</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="methodology-tab" data-bs-toggle="tab" data-bs-target="#methodology" type="button" role="tab" aria-controls="methodology" aria-selected="false">Test Metodolojisi</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="detailed-tab" data-bs-toggle="tab" data-bs-target="#detailed" type="button" role="tab" aria-controls="detailed" aria-selected="false">Detaylı Sonuçlar</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="false">Özet</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chart" type="button" role="tab" aria-controls="chart" aria-selected="false">Grafikler</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="algo-tab" data-bs-toggle="tab" data-bs-target="#algo" type="button" role="tab" aria-controls="algo" aria-selected="false">Algoritma Bilgileri</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="recommend-tab" data-bs-toggle="tab" data-bs-target="#recommend" type="button" role="tab" aria-controls="recommend" aria-selected="false">Öneriler</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="speed-sim-tab" data-bs-toggle="tab" data-bs-target="#speed-sim" type="button" role="tab" aria-controls="speed-sim" aria-selected="false">Hız Simülasyonu</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active animate__animated animate__fadeIn" id="intro" role="tabpanel" aria-labelledby="intro-tab">
+        <h3>Projenin Amacı</h3>
+        <p>
+          Bu proje, farklı kriptografik algoritmaların (simetrik, asimetrik ve hash) hem güvenlik hem de performans açısından kapsamlı bir karşılaştırmasını yapmayı amaçlar.
+          Gerçek zamanlı testler ve eş zamanlı çalışma (thread pool) kullanılarak elde edilen sonuçlar; ortalama süre ve standart sapma değerleri üzerinden değerlendirilerek, kullanıcılara bilinçli seçimler yapmaları için rehberlik sunmaktadır.
+        </p>
+        <p>
+          Aşağıdaki sekmelerde, test metodolojisi, detaylı performans sonuçları, en iyi konfigürasyon özetleri, logaritmik ölçekli interaktif grafikler, algoritmaların tarihçesi ve çalışma mantıkları hakkında bilgiler ile pratik kullanım önerileri sunulmaktadır.
+        </p>
+      </div>
+
+      <div class="tab-pane fade animate__animated animate__fadeIn" id="methodology" role="tabpanel" aria-labelledby="methodology-tab">
+        <h3>Test Metodolojisi Detayları</h3>
+        <p>Aşağıda, her algoritmanın test sürecine ilişkin detaylı açıklamalar yer almaktadır. Tüm testler, belirtilen konfigürasyonlar için 10 kez eş zamanlı olarak çalıştırılıp ortalama performans ve standart sapma değerleri hesaplanarak elde edilmiştir.</p>
+        {% for method in test_methodology %}
+          <div class="card mt-3">
+            <div class="card-header">
+              <h5>{{ method.name }}</h5>
+            </div>
+            <div class="card-body">
+              <p>{{ method.details }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="tab-pane fade animate__animated animate__fadeIn" id="detailed" role="tabpanel" aria-labelledby="detailed-tab">
+        <h3>Tüm Konfigürasyonlar İçin Detaylı Performans Sonuçları</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Algoritma</th>
+              <th>Konfigürasyon</th>
+              <th>Güvenlik (Bit)</th>
+              <th>Ort. Performans (s)</th>
+              <th>Std. Sapma (s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for res in results %}
+            <tr>
+              <td>{{ res.algorithm }}</td>
+              <td>{{ res.configuration }}</td>
+              <td>{{ res.security }}</td>
+              <td>
+                {% if res.performance_avg is none %}
+                  {{ res.performance_avg }}
+                {% else %}
+                  {{ "%.6f"|format(res.performance_avg) }}
+                {% endif %}
+              </td>
+              <td>
+                {% if res.performance_std is none %}
+                  {{ res.performance_std }}
+                {% else %}
+                  {{ "%.6f"|format(res.performance_std) }}
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-pane fade animate__animated animate__fadeIn" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+        <h3>Algoritma Bazında En Hızlı Konfigürasyonlar</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Algoritma</th>
+              <th>En Hızlı Konfigürasyon</th>
+              <th>Güvenlik (Bit)</th>
+              <th>Ort. Performans (s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for res in summary %}
+            <tr>
+              <td>{{ res.algorithm }}</td>
+              <td>{{ res.configuration }}</td>
+              <td>{{ res.security }}</td>
+              <td>
+                {% if res.performance_avg is none %}
+                  {{ res.performance_avg }}
+                {% else %}
+                  {{ "%.6f"|format(res.performance_avg) }}
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-pane fade animate__animated animate__fadeIn" id="chart" role="tabpanel" aria-labelledby="chart-tab">
+        <h3>İnteraktif Performans Grafikleri (Logaritmik Ölçek)</h3>
+        <div class="row">
+          <div class="col-lg-6">
+            <h5 class="text-center mt-3 mb-3">Özet Veriler: En Hızlı Konfigürasyonlar</h5>
+            <div class="chart-container">
+              <canvas id="jsChart"></canvas>
+            </div>
+          </div>
+          <div class="col-lg-6">
+             <h5 class="text-center mt-3 mb-3">Tüm Konfigürasyonların Karşılaştırması</h5>
+             <div class="chart-container">
+              <canvas id="jsAllChart"></canvas>
+            </div>
+          </div>
+        </div>
+         <p class="mt-4 text-center fst-italic" style="color: #a0a0a0;">Not: Grafiklerdeki süre eksenleri logaritmik ölçektedir. Bu, çok farklı büyüklükteki değerlerin (örneğin RSA ve AES süreleri) aynı grafikte anlamlı bir şekilde karşılaştırılabilmesini sağlar.</p>
+      </div>
+
+      <div class="tab-pane fade animate__animated animate__fadeIn" id="algo" role="tabpanel" aria-labelledby="algo-tab">
+        <h3>Kriptografik Algoritmalar Hakkında Detaylı Bilgiler</h3>
+        {% for algo in algo_details %}
+          <div class="card mt-3">
+            <div class="card-header">
+              <h5>{{ algo.name }}</h5>
+            </div>
+            <div class="card-body">
+              <p><strong>Kullanım Amacı:</strong> {{ algo.amac }}</p>
+              <p><strong>Tarihçe:</strong> {{ algo.tarihce }}</p>
+              <p><strong>Neden Ortaya Çıktı:</strong> {{ algo.neden }}</p>
+              <p><strong>Kullanım Alanları:</strong> {{ algo.kullanim }}</p>
+              <p><strong>Çalışma Mantığı:</strong> {{ algo.mantik }}</p>
+              <p><strong>Güvenlik Seviyesi:</strong> {{ algo.guvenlik }}</p>
+              <p><strong>Genel Performans Özellikleri:</strong> {{ algo.performans }}</p>
+              <p><strong>Performansı Etkileyen Değişkenler:</strong> {{ algo.degisken }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="tab-pane fade animate__animated animate__fadeIn" id="recommend" role="tabpanel" aria-labelledby="recommend-tab">
+        <h3>Algoritma Seçimi İçin Pratik Öneriler</h3>
+        <div class="recommendation-text">
+          <p>
+            Doğru kriptografik algoritma seçimi, projenizin özel ihtiyaçlarına bağlıdır. Güvenlik gereksinimleri, beklenen performans, mevcut donanım kaynakları, geliştirme ve entegrasyon kolaylığı gibi birçok faktör bu seçimde rol oynar.
+            Özellikle veri hassasiyeti yüksek ve ölçeklenebilir sistemlerde, güncel ve kanıtlanmış algoritmaların tercih edilmesi kritik öneme sahiptir.
+          </p>
+          <p>
+            <strong>AES (özellikle AES-256 GCM modu):</strong> Yüksek hacimli verilerin hem gizliliğini hem de bütünlüğünü sağlamak için günümüzün altın standardıdır. Hızlıdır ve yaygın donanım desteğine sahiptir.
+          </p>
+          <p>
+            <strong>RSA:</strong> Anahtar değişimi ve dijital imzalar için hala yaygın olsa da, özellikle yüksek anahtar boyutlarında (örn. 4096-bit) performansı simetrik algoritmalara göre düşüktür. Mümkünse, daha modern ve verimli olan <strong>ECC</strong> (Eliptik Eğri Kriptografisi) tercih edilmelidir.
+          </p>
+          <p>
+            <strong>ECC:</strong> RSA ile benzer güvenlik seviyelerini çok daha küçük anahtar boyutlarıyla sunar, bu da onu özellikle mobil cihazlar, IoT ve kaynak kısıtlı ortamlar için ideal kılar. Anahtar üretimi ve imzalama işlemleri genellikle RSA'dan daha hızlıdır.
+          </p>
+          <p>
+            <strong>DES ve 3DES:</strong> DES, günümüz standartlarına göre güvensiz kabul edilir ve kesinlikle kullanılmamalıdır. 3DES, DES'e göre daha güvenli olsa da AES'e göre yavaştır ve genellikle sadece eski sistemlerle uyumluluk için kullanılır. Yeni projelerde AES tercih edilmelidir.
+          </p>
+          <p>
+            <strong>Blowfish:</strong> AES kadar yaygın olmasa da, özellikle belirli uygulamalarda hızlı bir alternatif olabilir. Ancak, küçük blok boyutu (64-bit) bazı modern protokoller için dezavantaj oluşturabilir.
+          </p>
+          <p>
+            <strong>Hashing Algoritmaları:</strong> Veri bütünlüğü ve parola saklama için <strong>SHA-256</strong>, <strong>SHA-384</strong>, <strong>SHA-512</strong> veya <strong>SHA-3</strong> ailesinden algoritmalar tercih edilmelidir. <strong>MD5</strong> ve <strong>SHA-1</strong> algoritmaları çarpışma (collision) saldırılarına karşı zayıf oldukları için güvenlik açısından kritik uygulamalarda kesinlikle kullanılmamalıdır.
+          </p>
+        </div>
+      </div>
+
+      <div class="tab-pane fade animate__animated animate__fadeIn" id="speed-sim" role="tabpanel" aria-labelledby="speed-sim-tab">
+        <h3>Algoritma Çalışma Sayısı Simülasyonu</h3>
+        <p class="mt-3">Belirli bir süre içinde her bir algoritma konfigürasyonunun yaklaşık kaç kez çalışabileceğini hesaplayın. Bu, farklı algoritmaların pratik işlem hızlarını karşılaştırmanıza yardımcı olur.</p>
+
+        <div class="row mt-4 mb-4 align-items-end gy-3">
+          <div class="col-md-6 col-lg-5">
+            <label for="simulationDurationInput" class="form-label">Simülasyon Süresi (saniye cinsinden):</label>
+            <input type="number" class="form-control" id="simulationDurationInput" value="1" min="0.000001" step="0.000001">
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <button class="btn-custom-primary w-100" id="calculateSimulationButton">Hesapla</button>
+          </div>
+        </div>
+
+        <div id="simulationResultsContainer" class="mt-4">
+          <h4>Simülasyon Sonuçları:</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Algoritma</th>
+                <th>Konfigürasyon</th>
+                <th id="simulationTimeDynamicHeader">Tahmini Çalışma Sayısı</th>
+              </tr>
+            </thead>
+            <tbody id="simulationResultsTableBody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+    <footer>
+      <p>© 2025 Kriptografi Karşılaştırma Uygulaması.</p>
+    </footer>
+  </div>
+  <script>
+    var allResults = {{ results | tojson }};
+
+    // --- GRAFİK OLUŞTURMA BÖLÜMÜ ---
+    function formatTickValue(value) {
+        if (value === 0) return '0';
+        if (value < 0.000001 && value > 0) return value.toExponential(1);
+        if (value < 0.01 && value > 0) return value.toFixed(6);
+        if (value < 1) return value.toFixed(4);
+        if (value >= 10000) return value.toExponential(1);
+        if (value >= 1000) return value.toLocaleString();
+        return parseFloat(value.toFixed(4));
+    }
+
+    // Özet Veriler için Bar Grafik
+    var summaryData = {{ summary | tojson }};
+    var summaryLabels = summaryData.map(item => item.algorithm);
+    var summaryPerformance = summaryData.map(item => (item.performance_avg != null && item.performance_avg > 0) ? item.performance_avg : null); // Logaritmik ölçek için 0'dan büyük olmalı
+
+    var ctxSummary = document.getElementById('jsChart').getContext('2d');
+    new Chart(ctxSummary, {
+      type: 'bar',
+      data: {
+        labels: summaryLabels,
+        datasets: [{
+          label: 'Ortalama Performans (saniye)',
+          data: summaryPerformance,
+          backgroundColor: 'rgba(242, 201, 76, 0.65)',
+          borderColor: 'rgba(242, 201, 76, 1)',
+          borderWidth: 1.5,
+          hoverBackgroundColor: 'rgba(242, 201, 76, 0.85)',
+          hoverBorderColor: 'rgba(242, 201, 76, 1)',
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+            padding: {
+                left: 10,
+                right: 15,
+                top: 10,
+                bottom: 20
+            }
+        },
+        scales: {
+          y: {
+            type: 'logarithmic',
+            ticks: { color: '#e0e0e0', callback: formatTickValue, autoSkipPadding: 20, maxTicksLimit: 10 },
+            grid: { color: 'rgba(241, 241, 241, 0.08)' },
+            title: { display: true, text: 'Süre (s) - Logaritmik Ölçek', color: '#f2c94c', font: {size: 13} }
+          },
+          x: {
+            ticks: { color: '#e0e0e0', autoSkip: true, maxRotation: 0, minRotation: 0, font: {size: 11} },
+            grid: { display: false }
+          }
+        },
+        plugins: {
+          legend: { position: 'top', labels: { color: '#e0e0e0', font: { size: 12 }, padding: 15 } },
+          tooltip: {
+            backgroundColor: 'rgba(0,0,0,0.85)',
+            titleFont: { size: 14, weight: 'bold' },
+            bodyFont: { size: 13 },
+            callbacks: {
+              label: function(context) {
+                let label = context.dataset.label || '';
+                if (label) label += ': ';
+                if (context.parsed.y !== null) label += formatTickValue(context.parsed.y) + ' s';
+                return label;
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // Tüm Konfigürasyonlar için Bar Grafik (Yatay)
+    var validResultsForChart = allResults.filter(r => r.performance_avg != null && r.performance_avg > 0); // Logaritmik ölçek için 0'dan büyük olmalı
+    var allLabels = validResultsForChart.map(r => `${r.algorithm} (${r.configuration})`);
+    var allData = validResultsForChart.map(r => r.performance_avg);
+
+    var ctxAll = document.getElementById('jsAllChart').getContext('2d');
+    new Chart(ctxAll, {
+      type: 'bar',
+      data: {
+        labels: allLabels,
+        datasets: [{
+          label: 'Ortalama Performans (saniye)',
+          data: allData,
+          backgroundColor: 'rgba(153, 102, 255, 0.65)',
+          borderColor: 'rgba(153, 102, 255, 1)',
+          borderWidth: 1.5,
+          hoverBackgroundColor: 'rgba(153, 102, 255, 0.85)',
+          hoverBorderColor: 'rgba(153, 102, 255, 1)',
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+            padding: {
+                left: 30,
+                right: 15,
+                top: 10,
+                bottom: 15
+            }
+        },
+        scales: {
+          x: { // Yatay bar grafikte değer ekseni
+            type: 'logarithmic',
+            ticks: { color: '#e0e0e0', callback: formatTickValue, autoSkipPadding: 20, maxTicksLimit: 8 },
+            grid: { color: 'rgba(241, 241, 241, 0.08)' },
+            title: { display: true, text: 'Süre (s) - Logaritmik Ölçek', color: '#f2c94c', font: {size: 13} }
+          },
+          y: { // Yatay bar grafikte kategori ekseni
+            ticks: { color: '#e0e0e0', font: {size: 9.5}, autoSkip: false }, // autoSkip: false ile tüm etiketler gösterilmeye çalışılır
+            grid: { display: false }
+          }
+        },
+        plugins: {
+          legend: { position: 'top', labels: { color: '#e0e0e0', font: { size: 12 }, padding: 15 } },
+          tooltip: {
+            backgroundColor: 'rgba(0,0,0,0.85)',
+            titleFont: { size: 14, weight: 'bold' },
+            bodyFont: { size: 13 },
+            callbacks: {
+              label: function(context) {
+                let label = context.dataset.label || '';
+                if (label) label += ': ';
+                if (context.parsed.x !== null) label += formatTickValue(context.parsed.x) + ' s';
+                return label;
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // --- HIZ SİMÜLASYONU BÖLÜMÜ ---
+    const simulationDurationInput = document.getElementById('simulationDurationInput');
+    const resultsTableBody = document.getElementById('simulationResultsTableBody');
+    const calculateSimulationButton = document.getElementById('calculateSimulationButton');
+    const simulationTimeDynamicHeader = document.getElementById('simulationTimeDynamicHeader');
+
+
+    function runSimulation() {
+        resultsTableBody.innerHTML = '';
+        const duration = parseFloat(simulationDurationInput.value);
+
+        if (simulationTimeDynamicHeader) {
+             if(!isNaN(duration) && duration > 0) {
+                simulationTimeDynamicHeader.textContent = `Tahmini Çalışma Sayısı (${duration.toLocaleString()} saniyede)`;
+             } else {
+                simulationTimeDynamicHeader.textContent = `Tahmini Çalışma Sayısı (Süre Giriniz)`;
+             }
+        }
+
+        if (isNaN(duration) || duration <= 0) {
+            const row = `<tr><td colspan="3" style="color: #ff6b6b; text-align: center; padding: 20px;">Lütfen geçerli pozitif bir süre giriniz.</td></tr>`;
+            resultsTableBody.innerHTML = row;
+            return;
+        }
+
+        let hasCalculableData = false;
+        allResults.forEach(res => {
+            let runCountDisplay = "Performans verisi yok veya geçersiz.";
+            let rowClass = "text-muted";
+
+            if (res.performance_avg !== null && typeof res.performance_avg === 'number') {
+                 if (res.performance_avg > 0) {
+                    const runCount = Math.floor(duration / res.performance_avg);
+                    runCountDisplay = runCount.toLocaleString() + " kez";
+                    rowClass = "";
+                    hasCalculableData = true;
+                 } else if (res.performance_avg === 0) {
+                    runCountDisplay = "Sonsuz (performans süresi sıfır).";
+                    rowClass = "text-warning";
+                    hasCalculableData = true;
+                 } else {
+                    runCountDisplay = "Geçersiz performans verisi (negatif).";
+                 }
+            } else if (res.security === "Kütüphane eksik") {
+                 runCountDisplay = "Kütüphane eksik, hesaplanamadı.";
+            }
+
+
+            const row = `<tr class="${rowClass}">
+                          <td>${res.algorithm}</td>
+                          <td>${res.configuration}</td>
+                          <td>${runCountDisplay}</td>
+                       </tr>`;
+            resultsTableBody.innerHTML += row;
+        });
+
+        if (!hasCalculableData && allResults.length > 0) {
+             resultsTableBody.innerHTML = `<tr><td colspan="3" style="text-align: center; padding: 20px;">Hesaplanabilir performans verisi bulunamadı.</td></tr>`;
+        } else if (allResults.length === 0) {
+             resultsTableBody.innerHTML = `<tr><td colspan="3" style="text-align: center; padding: 20px;">Karşılaştırılacak algoritma verisi bulunamadı.</td></tr>`;
+        }
+    }
+
+    if (calculateSimulationButton) {
+        calculateSimulationButton.addEventListener('click', runSimulation);
+    }
+
+    const speedSimTab = document.getElementById('speed-sim-tab');
+    if (speedSimTab) {
+        speedSimTab.addEventListener('shown.bs.tab', function () { // Bootstrap 5 için doğru olay dinleyici
+           runSimulation();
+        });
+    }
+
+    // Sayfa ilk yüklendiğinde Hız Simülasyonu sekmesi için başlangıç durumu
+    if (document.getElementById('intro-tab').classList.contains('active')) {
+        if (resultsTableBody && simulationTimeDynamicHeader) {
+           resultsTableBody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: #888; padding: 20px;">Süre girip 'Hesapla' butonuna basınız veya sekmeyi aktifleştiriniz.</td></tr>`;
+           simulationTimeDynamicHeader.textContent = `Tahmini Çalışma Sayısı`;
+        }
+    } else { // Giriş sekmesi aktif değilse
+        // Eğer Hız Simülasyonu sekmesi aktifse, simülasyonu çalıştır (bu zaten 'shown.bs.tab' ile de ele alınıyor)
+        if (document.getElementById('speed-sim-tab') && document.getElementById('speed-sim-tab').classList.contains('active')) {
+            runSimulation();
+        }
+        // Hız Simülasyonu sekmesi aktif DEĞİLSE ve tablo boş kalmasın isteniyorsa:
+        else if (resultsTableBody && simulationTimeDynamicHeader) {
+             resultsTableBody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: #888; padding: 20px;">İlgili sekmeye geçerek simülasyonu başlatın.</td></tr>`;
+             simulationTimeDynamicHeader.textContent = `Tahmini Çalışma Sayısı`;
+        }
+    }
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
