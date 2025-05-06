@@ -1,0 +1,1 @@
+Günümüzde kullanılan kriptografi algoritmalarının karşılaştırılmasını sağlayan bir uygulama. Hem algoritmalar hakkında bilgi içermekte, hem de algortimaların süre bazlı çalışma hızlarını karşılaştırmaktadır.
