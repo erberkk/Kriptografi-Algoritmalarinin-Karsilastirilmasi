@@ -1,0 +1,198 @@
+[
+    {
+        "algorithm": "RSA",
+        "configuration": "Key Size: 1024",
+        "security": 1024,
+        "performance_avg": 0.5264266300029703,
+        "performance_std": 0.23687344936593024
+    },
+    {
+        "algorithm": "RSA",
+        "configuration": "Key Size: 2048",
+        "security": 2048,
+        "performance_avg": 1.643902820000949,
+        "performance_std": 0.5577938078718584
+    },
+    {
+        "algorithm": "RSA",
+        "configuration": "Key Size: 4096",
+        "security": 4096,
+        "performance_avg": 22.29264363999973,
+        "performance_std": 7.365969176706227
+    },
+    {
+        "algorithm": "AES",
+        "configuration": "Key: 128-bit, Msg: 100B",
+        "security": 128,
+        "performance_avg": 0.0001963300019269809,
+        "performance_std": 0.00018721261762674412
+    },
+    {
+        "algorithm": "AES",
+        "configuration": "Key: 128-bit, Msg: 1000B",
+        "security": 128,
+        "performance_avg": 0.00011582000443013384,
+        "performance_std": 9.242088504370958e-05
+    },
+    {
+        "algorithm": "AES",
+        "configuration": "Key: 128-bit, Msg: 10000B",
+        "security": 128,
+        "performance_avg": 0.0002109400011249818,
+        "performance_std": 0.00010411553321257879
+    },
+    {
+        "algorithm": "AES",
+        "configuration": "Key: 192-bit, Msg: 100B",
+        "security": 192,
+        "performance_avg": 8.586999902036042e-05,
+        "performance_std": 6.758985245652245e-05
+    },
+    {
+        "algorithm": "AES",
+        "configuration": "Key: 192-bit, Msg: 1000B",
+        "security": 192,
+        "performance_avg": 5.845999985467643e-05,
+        "performance_std": 3.902579428463349e-05
+    },
+    {
+        "algorithm": "AES",
+        "configuration": "Key: 192-bit, Msg: 10000B",
+        "security": 192,
+        "performance_avg": 0.00017244999908143653,
+        "performance_std": 7.581423779372288e-05
+    },
+    {
+        "algorithm": "AES",
+        "configuration": "Key: 256-bit, Msg: 100B",
+        "security": 256,
+        "performance_avg": 4.818000015802681e-05,
+        "performance_std": 3.7780121264472626e-05
+    },
+    {
+        "algorithm": "AES",
+        "configuration": "Key: 256-bit, Msg: 1000B",
+        "security": 256,
+        "performance_avg": 7.210000330815092e-05,
+        "performance_std": 7.246204752231322e-05
+    },
+    {
+        "algorithm": "AES",
+        "configuration": "Key: 256-bit, Msg: 10000B",
+        "security": 256,
+        "performance_avg": 0.0001653200000873767,
+        "performance_std": 0.00011102281740415601
+    },
+    {
+        "algorithm": "DES",
+        "configuration": "Msg: 100B",
+        "security": 56,
+        "performance_avg": 0.00016905000084079801,
+        "performance_std": 0.00011107844985496689
+    },
+    {
+        "algorithm": "DES",
+        "configuration": "Msg: 1000B",
+        "security": 56,
+        "performance_avg": 0.00014844999968772755,
+        "performance_std": 0.00010556475787242807
+    },
+    {
+        "algorithm": "DES",
+        "configuration": "Msg: 10000B",
+        "security": 56,
+        "performance_avg": 0.0002862499968614429,
+        "performance_std": 6.886336063818588e-05
+    },
+    {
+        "algorithm": "Blowfish",
+        "configuration": "Msg: 100B",
+        "security": 128,
+        "performance_avg": 0.00017093999922508375,
+        "performance_std": 8.593153444570196e-05
+    },
+    {
+        "algorithm": "Blowfish",
+        "configuration": "Msg: 1000B",
+        "security": 128,
+        "performance_avg": 0.0001935099979164079,
+        "performance_std": 6.554229536278256e-05
+    },
+    {
+        "algorithm": "Blowfish",
+        "configuration": "Msg: 10000B",
+        "security": 128,
+        "performance_avg": 0.0003032700027688406,
+        "performance_std": 6.56879144662453e-05
+    },
+    {
+        "algorithm": "ECC",
+        "configuration": "Curve: secp256r1",
+        "security": 128,
+        "performance_avg": 0.0160672500016517,
+        "performance_std": 0.0014976183784301785
+    },
+    {
+        "algorithm": "ECC",
+        "configuration": "Curve: secp384r1",
+        "security": 192,
+        "performance_avg": 0.0021750500003690832,
+        "performance_std": 3.773682763603501e-05
+    },
+    {
+        "algorithm": "Hashing",
+        "configuration": "MD5, Msg: 100B",
+        "security": 0,
+        "performance_avg": 6.619999476242811e-06,
+        "performance_std": 8.614497464501339e-06
+    },
+    {
+        "algorithm": "Hashing",
+        "configuration": "SHA-1, Msg: 100B",
+        "security": 0,
+        "performance_avg": 2.8399983420968057e-06,
+        "performance_std": 2.2619493537053075e-06
+    },
+    {
+        "algorithm": "Hashing",
+        "configuration": "SHA-256, Msg: 100B",
+        "security": 256,
+        "performance_avg": 5.22999616805464e-06,
+        "performance_std": 6.202105274415021e-06
+    },
+    {
+        "algorithm": "Hashing",
+        "configuration": "SHA3-256, Msg: 100B",
+        "security": 256,
+        "performance_avg": 5.5299969972111285e-06,
+        "performance_std": 6.046493513284252e-06
+    },
+    {
+        "algorithm": "Hashing",
+        "configuration": "MD5, Msg: 10000B",
+        "security": 0,
+        "performance_avg": 3.968999953940511e-05,
+        "performance_std": 2.5977505554607057e-05
+    },
+    {
+        "algorithm": "Hashing",
+        "configuration": "SHA-1, Msg: 10000B",
+        "security": 0,
+        "performance_avg": 6.94699992891401e-05,
+        "performance_std": 4.750865196265121e-05
+    },
+    {
+        "algorithm": "Hashing",
+        "configuration": "SHA-256, Msg: 10000B",
+        "security": 256,
+        "performance_avg": 6.273999460972845e-05,
+        "performance_std": 3.452819747680411e-05
+    },
+    {
+        "algorithm": "Hashing",
+        "configuration": "SHA3-256, Msg: 10000B",
+        "security": 256,
+        "performance_avg": 5.17400010721758e-05,
+        "performance_std": 3.580545430172768e-05
+    }
+]

@@ -1,0 +1,670 @@
+# English translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-05-06 14:35+0300\n"
+"PO-Revision-Date: 2025-05-06 14:35+0300\n"
+"Last-Translator: Google Gemini <>\n" # Updated translator
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n" # Assuming this was from the user's file
+
+
+#: app.py: [...] app.py: [...] ... (Line numbers might differ slightly)
+msgid "Kütüphane eksik"
+msgstr "Library missing"
+
+#: app.py: [...]
+msgid "Asimetrik şifreleme ve dijital imza"
+msgstr "Asymmetric encryption and digital signature"
+
+#: app.py: [...]
+msgid "1977'de Ronald Rivest, Adi Shamir ve Leonard Adleman tarafından geliştirildi."
+msgstr "Developed in 1977 by Ronald Rivest, Adi Shamir, and Leonard Adleman."
+
+#: app.py: [...]
+msgid "Güvenli anahtar değişimi ve dijital imzaların gerekliliği nedeniyle geliştirilmiştir."
+msgstr "Developed due to the need for secure key exchange and digital signatures."
+
+#: app.py: [...]
+msgid "Web güvenliği (TLS/SSL), dijital imza, sertifika altyapıları, vb."
+msgstr "Web security (TLS/SSL), digital signatures, certificate infrastructures, etc."
+
+#: app.py: [...]
+msgid "Büyük asal sayıları çarpanlara ayırmanın zorluğuna dayanır."
+msgstr "Based on the difficulty of factoring large prime numbers."
+
+#: app.py: [...]
+msgid "Anahtar boyutu (örn. 2048, 4096 bit) arttıkça güvenlik de artar."
+msgstr "Security increases with key size (e.g., 2048, 4096 bits)."
+
+#: app.py: [...]
+msgid "Diğer asimetrik yöntemlere göre hesaplama maliyeti yüksektir."
+msgstr "Computational cost is high compared to other asymmetric methods."
+
+#: app.py: [...]
+msgid "Anahtar boyutu arttıkça güvenlik artar ancak performans düşer."
+msgstr "As key size increases, security improves but performance decreases."
+
+#: app.py: [...]
+msgid "Simetrik şifreleme (gizlilik sağlama)"
+msgstr "Symmetric encryption (providing confidentiality)"
+
+#: app.py: [...]
+msgid "NIST yarışmasında Rijndael algoritması seçilerek 2001'de AES standardı oldu."
+msgstr "Became the AES standard in 2001 after the Rijndael algorithm was selected in the NIST competition."
+
+#: app.py: [...]
+msgid "DES'in yetersiz kalmaya başlaması ve daha hızlı, güvenli bir standarda ihtiyaç duyulması."
+msgstr "The inadequacy of DES and the need for a faster, more secure standard."
+
+#: app.py: [...]
+msgid "Finans, devlet kurumları, disk şifreleme, Wi-Fi (WPA2), vs."
+msgstr "Finance, government institutions, disk encryption, Wi-Fi (WPA2), etc."
+
+#: app.py: [...]
+msgid "Substitution-Permutation Network yapısına sahiptir, blok bazlı şifreleme yapar."
+msgstr "Features a Substitution-Permutation Network structure, performs block-based encryption."
+
+#: app.py: [...]
+msgid "128, 192 veya 256 bit anahtar ile yüksek güvenlik sağlar."
+msgstr "Provides high security with 128, 192, or 256-bit keys."
+
+#: app.py: [...]
+msgid "Yazılım ve donanımda oldukça hızlı ve verimli çalışır."
+msgstr "Works quite fast and efficiently in software and hardware."
+
+#: app.py: [...]
+msgid "Anahtar boyutu ve blok şifreleme modu (CBC, GCM, vb.) performansı etkiler."
+msgstr "Key size and block cipher mode (CBC, GCM, etc.) affect performance."
+
+#: app.py: [...]
+msgid "Erken dönem simetrik şifreleme standardı"
+msgstr "Early symmetric encryption standard"
+
+#: app.py: [...]
+msgid "1970'lerde IBM tarafından geliştirildi, 1977'de ABD hükümeti standardı oldu."
+msgstr "Developed by IBM in the 1970s, became a US government standard in 1977."
+
+#: app.py: [...]
+msgid "Dijital iletişimin yaygınlaşmasıyla gizlilik ihtiyacını karşılamak üzere."
+msgstr "To meet the need for confidentiality with the spread of digital communication."
+
+#: app.py: [...]
+msgid "Tarihi önemi vardır; günümüzde çoğunlukla legacy sistemlerde görülebilir."
+msgstr "Has historical significance; mostly seen in legacy systems today."
+
+#: app.py: [...]
+msgid "Feistel tabanlı yapı, 56 bit efektif anahtar kullanır."
+msgstr "Feistel-based structure, uses a 56-bit effective key."
+
+#: app.py: [...]
+msgid "56 bit anahtar günümüz için zayıf kabul edilir, kolay brute-force edilebilir."
+msgstr "The 56-bit key is considered weak today, easily susceptible to brute-force attacks."
+
+#: app.py: [...]
+msgid "Hızlı çalışabilir ancak güvenlik yeterli değildir."
+msgstr "Can operate quickly, but security is insufficient."
+
+#: app.py: [...]
+msgid "Sabit blok boyutu (64 bit) ve 56 bit anahtar nedeniyle esnekliği azdır."
+msgstr "Limited flexibility due to fixed block size (64 bits) and 56-bit key."
+
+#: app.py: [...]
+msgid "Hızlı, özgürce kullanılabilir simetrik şifreleme"
+msgstr "Fast, freely available symmetric encryption"
+
+#: app.py: [...]
+msgid "Bruce Schneier tarafından 1993'te geliştirildi."
+msgstr "Developed by Bruce Schneier in 1993."
+
+#: app.py: [...]
+msgid "DES'e alternatif, daha esnek anahtar boyutu ve ücretsiz kullanım ihtiyacı."
+msgstr "Alternative to DES, need for more flexible key size and free use."
+
+#: app.py: [...]
+msgid "Açık kaynak projeler, yazılım tabanlı şifreleme gereksinimleri, bazı VPN çözümleri."
+msgstr "Open source projects, software-based encryption requirements, some VPN solutions."
+
+#: app.py: [...]
+msgid "Feistel tabanlı, 32 ile 448 bit arasında değişen anahtar uzunluğu."
+msgstr "Feistel-based, with key lengths ranging from 32 to 448 bits."
+
+#: app.py: [...]
+msgid "AES kadar yaygın olmasa da güvenlidir."
+msgstr "Secure, although not as common as AES."
+
+#: app.py: [...]
+msgid "Yazılımda hızlı çalışır, özellikle kısa mesajlar için optimizasyonu bulunur."
+msgstr "Runs fast in software, especially optimized for short messages."
+
+#: app.py: [...]
+msgid "Anahtar uzunluğu ve tur sayısı performansı etkiler."
+msgstr "Key length and number of rounds affect performance."
+
+#: app.py: [...]
+msgid "Asimetrik şifreleme ve dijital imza, düşük anahtar boyutuyla yüksek güvenlik"
+msgstr "Asymmetric encryption and digital signature, high security with small key size"
+
+#: app.py: [...]
+msgid "Eliptik eğri matematiği 1980-90'larda kriptografiye uyarlandı."
+msgstr "Elliptic curve mathematics adapted to cryptography in the 1980s-90s."
+
+#: app.py: [...]
+msgid "RSA ve benzeri algoritmalara alternatif, daha küçük anahtarlarla benzer güvenlik sunma ihtiyacı."
+msgstr "Alternative to RSA and similar algorithms, need to offer similar security with smaller keys."
+
+#: app.py: [...]
+msgid "Mobil cihazlar, IoT, blockchain, düşük güç tüketimi gereken uygulamalar."
+msgstr "Mobile devices, IoT, blockchain, applications requiring low power consumption."
+
+#: app.py: [...]
+msgid "Eliptik eğriler üzerinde nokta hesaplarına dayalıdır."
+msgstr "Based on point calculations on elliptic curves."
+
+#: app.py: [...]
+msgid "Seçilen eğri ve anahtar boyutuna göre değişir."
+msgstr "Varies depending on the selected curve and key size."
+
+#: app.py: [...]
+msgid "RSA'ya göre daha hızlı anahtar üretimi ve imzalama sunar."
+msgstr "Offers faster key generation and signing compared to RSA."
+
+#: app.py: [...]
+msgid "Eğri seçimi ve anahtar boyutu performansı belirler."
+msgstr "Curve selection and key size determine performance."
+
+#: app.py: [...]
+msgid "Veri bütünlüğü kontrolü, parola saklama, dijital imza öncesi özet çıkarma"
+msgstr "Data integrity check, password storage, pre-digital signature hashing"
+
+#: app.py: [...]
+msgid "MD5 ve SHA-1 eski, SHA-2 ve SHA-3 daha güncel standartlardır."
+msgstr "MD5 and SHA-1 are old standards, SHA-2 and SHA-3 are more current."
+
+#: app.py: [...]
+msgid "Verinin doğruluğunu hızlı kontrol etmek ve parolaları güvenli saklamak için."
+msgstr "To quickly verify data integrity and securely store passwords."
+
+#: app.py: [...]
+msgid "Dosya bütünlüğü, parola saklama, dijital imza sistemleri."
+msgstr "File integrity, password storage, digital signature systems."
+
+#: app.py: [...]
+msgid "Veriyi sabit uzunlukta özet değere dönüştürür."
+msgstr "Transforms data into a fixed-length hash value."
+
+#: app.py: [...]
+msgid "Algoritmaya göre çarpışma ve bulma saldırılarına direnç değişir."
+msgstr "Resistance to collision and preimage attacks varies by algorithm."
+
+#: app.py: [...]
+msgid "Genellikle simetrik şifreleme işlemlerinden daha hızlıdır."
+msgstr "Generally faster than symmetric encryption operations."
+
+#: app.py: [...]
+msgid "Mesaj uzunluğu arttıkça işlem süresi uzar."
+msgstr "Processing time increases with message length."
+
+#: app.py: [...]
+msgid "RSA Algoritması Testi"
+msgstr "RSA Algorithm Test"
+
+#: app.py: [...]
+msgid ""
+"RSA algoritması için 1024, 2048 ve 4096 bit anahtar boyutları kullanılarak "
+"testler gerçekleştirilmektedir. Her testte belirtilen bit uzunluğunda bir "
+"anahtar üretilip, PKCS1_OAEP protokolüyle rastgele mesaj şifrelenir. "
+"Testler eş zamanlı (10 paralel işlem) olarak çalıştırılır ve ortalama süre "
+"ile standart sapma hesaplanır."
+msgstr ""
+"Tests are performed for the RSA algorithm using key sizes of 1024, 2048, and "
+"4096 bits. In each test, a key of the specified bit length is generated, "
+"and a random message is encrypted using the PKCS1_OAEP protocol. Tests are "
+"run concurrently (10 parallel operations), and the average time and "
+"standard deviation are calculated."
+
+#: app.py: [...]
+msgid "AES Algoritması Testi"
+msgstr "AES Algorithm Test"
+
+#: app.py: [...]
+msgid ""
+"AES testlerinde 128, 192 ve 256 bit anahtarlar ve 100B, 1000B, 10000B "
+"mesajlar kullanılarak CBC modunda şifreleme yapılır. Padding işlemi de "
+"dahil edilerek, eş zamanlı testler sonucunda performans ölçümleri alınır."
+msgstr ""
+"In AES tests, encryption is performed in CBC mode using 128, 192, and "
+"256-bit keys and messages of 100B, 1000B, 10000B. Including the padding "
+"process, performance measurements are taken from concurrent tests."
+
+#: app.py: [...]
+msgid "DES Algoritması Testi"
+msgstr "DES Algorithm Test"
+
+#: app.py: [...]
+msgid ""
+"DES algoritmasında 56-bit anahtar ve farklı mesaj boyutları kullanılarak CBC "
+"modunda şifreleme gerçekleştirilir. Testler 10 paralel işlem ile yürütülür "
+"ve sonuçlar ortalama süre ile standart sapma olarak raporlanır."
+msgstr ""
+"In the DES algorithm, encryption is performed in CBC mode using a 56-bit key "
+"and different message sizes. Tests are conducted with 10 parallel "
+"operations, and results are reported as average time and standard deviation."
+
+#: app.py: [...]
+msgid "Blowfish Algoritması Testi"
+msgstr "Blowfish Algorithm Test"
+
+#: app.py: [...]
+msgid ""
+"Blowfish testlerinde 128-bit anahtar kullanılarak, farklı mesaj boyutlarıyla "
+"CBC modunda şifreleme yapılır. Padding işlemi de gerçekleştirilip, eş "
+"zamanlı testlerle performans ölçümleri elde edilir."
+msgstr ""
+"In Blowfish tests, encryption is performed in CBC mode using a 128-bit key "
+"with different message sizes. The padding process is also performed, and "
+"performance measurements are obtained through concurrent tests."
+
+#: app.py: [...]
+msgid "ECC Algoritması Testi"
+msgstr "ECC Algorithm Test"
+
+#: app.py: [...]
+msgid ""
+"ECC testlerinde SECP256R1 ve SECP384R1 eğrileriyle eş zamanlı olarak ECDSA "
+"imzalama işlemi gerçekleştirilir. Her eğri için ortalama imzalama süresi ve "
+"standart sapma ölçülür."
+msgstr ""
+"In ECC tests, the ECDSA signing operation is performed concurrently with "
+"SECP256R1 and SECP384R1 curves. The average signing time and standard "
+"deviation are measured for each curve."
+
+#: app.py: [...]
+msgid "Hashing Fonksiyonları Testi"
+msgstr "Hashing Functions Test"
+
+#: app.py: [...]
+msgid ""
+"Hash testlerinde MD5, SHA-1, SHA-256 ve SHA3-256 algoritmaları kullanılarak, "
+"farklı mesaj uzunluklarında veri özeti hesaplanır. Eş zamanlı testlerle "
+"ortalama süre ve standart sapma değerleri elde edilir."
+msgstr ""
+"In Hash tests, data digests are calculated for different message lengths "
+"using MD5, SHA-1, SHA-256, and SHA3-256 algorithms. Average time and "
+"standard deviation values are obtained through concurrent tests."
+
+#: app.py: [...]
+msgid "Ortalama Performans (saniye)"
+msgstr "Average Performance (seconds)"
+
+#: app.py: [...]
+msgid "Süre (s) - Logaritmik Ölçek"
+msgstr "Duration (s) - Logarithmic Scale"
+
+#: app.py: [...]
+msgid "Tahmini Çalışma Sayısı"
+msgstr "Estimated Run Count"
+
+#: app.py: [...]
+msgid "Tahmini Çalışma Sayısı ({duration} saniyede)"
+msgstr "Estimated Run Count (in {duration} seconds)"
+
+#: app.py: [...]
+msgid "kez"
+msgstr "times"
+
+#: app.py: [...]
+msgid "Lütfen geçerli pozitif bir süre giriniz."
+msgstr "Please enter a valid positive duration."
+
+#: app.py: [...]
+msgid "Performans verisi yok veya geçersiz."
+msgstr "Performance data missing or invalid."
+
+#: app.py: [...]
+msgid "Kütüphane eksik, hesaplanamadı."
+msgstr "Library missing, could not calculate."
+
+#: app.py: [...]
+msgid "Sonsuz (performans süresi sıfır)."
+msgstr "Infinite (performance time is zero)."
+
+#: app.py: [...]
+msgid "Geçersiz performans verisi (negatif)."
+msgstr "Invalid performance data (negative)."
+
+#: app.py: [...]
+msgid "Hesaplanabilir performans verisi bulunamadı."
+msgstr "No calculable performance data found."
+
+#: app.py: [...]
+msgid "Karşılaştırılacak algoritma verisi bulunamadı."
+msgstr "No algorithm data found for comparison."
+
+#: app.py: [...]
+msgid "Süre girip 'Hesapla' butonuna basınız veya sekmeyi aktifleştiriniz."
+msgstr "Enter duration and press 'Calculate' or activate the tab."
+
+#: app.py: [...]
+msgid "İlgili sekmeye geçerek simülasyonu başlatın."
+msgstr "Switch to the relevant tab to start the simulation."
+
+#: app.py: [...]
+msgid "Özet Veriler: En Hızlı Konfigürasyonlar"
+msgstr "Summary Data: Fastest Configurations"
+
+#: app.py: [...]
+msgid "Tüm Konfigürasyonların Karşılaştırması"
+msgstr "Comparison of All Configurations"
+
+#: app.py: [...]
+msgid ""
+"Not: Grafiklerdeki süre eksenleri logaritmik ölçektedir. Bu, çok farklı "
+"büyüklükteki değerlerin (örneğin RSA ve AES süreleri) aynı grafikte anlamlı "
+"bir şekilde karşılaştırılabilmesini sağlar."
+msgstr ""
+"Note: The duration axes in the graphs are on a logarithmic scale. This "
+"allows values of very different magnitudes (e.g., RSA and AES times) to be "
+"meaningfully compared on the same graph."
+
+#: app.py: [...]
+msgid "Hesapla"
+msgstr "Calculate"
+
+#: app.py: [...]
+msgid "Simülasyon Sonuçları:"
+msgstr "Simulation Results:"
+
+#: app.py: [...]
+msgid "Simülasyon Süresi (saniye cinsinden):"
+msgstr "Simulation Duration (in seconds):"
+
+#: app.py: [...] templates/index.html: [...]
+msgid "Algoritma"
+msgstr "Algorithm"
+
+#: app.py: [...] templates/index.html: [...]
+msgid "Konfigürasyon"
+msgstr "Configuration"
+
+#: app.py: [...] templates/index.html: [...]
+msgid "Güvenlik (Bit)"
+msgstr "Security (Bits)"
+
+#: app.py: [...] templates/index.html: [...]
+msgid "Ort. Performans (s)"
+msgstr "Avg. Performance (s)"
+
+#: app.py: [...] templates/index.html: [...]
+msgid "Std. Sapma (s)"
+msgstr "Std. Deviation (s)"
+
+#: app.py: [...] templates/index.html: [...]
+msgid "En Hızlı Konfigürasyon"
+msgstr "Fastest Configuration"
+
+#: templates/index.html:6
+msgid "Kriptografik Algoritma Karşılaştırması"
+msgstr "Cryptographic Algorithm Comparison"
+
+#: templates/index.html:160
+msgid "Site İkonu"
+msgstr "Site Icon"
+
+#: templates/index.html:168
+msgid "Giriş"
+msgstr "Introduction"
+
+#: templates/index.html:171
+msgid "Test Metodolojisi"
+msgstr "Test Methodology"
+
+#: templates/index.html:174
+msgid "Detaylı Sonuçlar"
+msgstr "Detailed Results"
+
+#: templates/index.html:177
+msgid "Özet"
+msgstr "Summary"
+
+#: templates/index.html:180
+msgid "Grafikler"
+msgstr "Charts"
+
+#: templates/index.html:183
+msgid "Algoritma Bilgileri"
+msgstr "Algorithm Information"
+
+#: templates/index.html:186
+msgid "Öneriler"
+msgstr "Recommendations"
+
+#: templates/index.html:189
+msgid "Hız Simülasyonu"
+msgstr "Speed Simulation"
+
+#: templates/index.html:196
+msgid "Projenin Amacı"
+msgstr "Project Purpose"
+
+#: templates/index.html:198
+msgid ""
+"Bu proje, farklı kriptografik algoritmaların (simetrik, asimetrik ve hash) "
+"hem güvenlik hem de performans açısından kapsamlı bir karşılaştırmasını "
+"yapmayı amaçlar."
+msgstr ""
+"This project aims to provide a comprehensive comparison of different "
+"cryptographic algorithms (symmetric, asymmetric, and hash) in terms of both "
+"security and performance."
+
+#: templates/index.html:199
+msgid ""
+"Gerçek zamanlı testler ve eş zamanlı çalışma (thread pool) kullanılarak elde "
+"edilen sonuçlar; ortalama süre ve standart sapma değerleri üzerinden "
+"değerlendirilerek, kullanıcılara bilinçli seçimler yapmaları için rehberlik "
+"sunmaktadır."
+msgstr ""
+"The results obtained using real-time tests and concurrent execution (thread "
+"pool) are evaluated based on average time and standard deviation values, "
+"offering guidance for users to make informed choices."
+
+#: templates/index.html:202
+msgid ""
+"Aşağıdaki sekmelerde, test metodolojisi, detaylı performans sonuçları, en "
+"iyi konfigürasyon özetleri, logaritmik ölçekli interaktif grafikler, "
+"algoritmaların tarihçesi ve çalışma mantıkları hakkında bilgiler ile pratik "
+"kullanım önerileri sunulmaktadır."
+msgstr ""
+"The following tabs present the test methodology, detailed performance "
+"results, summaries of the best configurations, interactive graphs with "
+"logarithmic scales, information about the history and working principles of "
+"the algorithms, and practical usage recommendations."
+
+#: templates/index.html:208
+msgid "Test Metodolojisi Detayları"
+msgstr "Test Methodology Details"
+
+#: templates/index.html:209
+msgid ""
+"Aşağıda, her algoritmanın test sürecine ilişkin detaylı açıklamalar yer "
+"almaktadır. Tüm testler, belirtilen konfigürasyonlar için 10 kez eş zamanlı "
+"olarak çalıştırılıp ortalama performans ve standart sapma değerleri "
+"hesaplanarak elde edilmiştir."
+msgstr ""
+"Below are detailed descriptions of the testing process for each algorithm. "
+"All tests were performed by running the specified configurations 10 times "
+"concurrently, and calculating the average performance and standard "
+"deviation values."
+
+#: templates/index.html:226
+msgid "Tüm Konfigürasyonlar İçin Detaylı Performans Sonuçları"
+msgstr "Detailed Performance Results for All Configurations"
+
+#: templates/index.html:268
+msgid "Algoritma Bazında En Hızlı Konfigürasyonlar"
+msgstr "Fastest Configurations per Algorithm"
+
+#: templates/index.html:296
+msgid "İnteraktif Performans Grafikleri (Logaritmik Ölçek)"
+msgstr "Interactive Performance Charts (Logarithmic Scale)"
+
+#: templates/index.html:318
+msgid "Kriptografik Algoritmalar Hakkında Detaylı Bilgiler"
+msgstr "Detailed Information About Cryptographic Algorithms"
+
+#: templates/index.html:327 templates/index.html:367
+msgid "Kullanım Amacı"
+msgstr "Purpose of Use"
+
+#: templates/index.html:328 templates/index.html:368
+msgid "Tarihçe"
+msgstr "History"
+
+#: templates/index.html:329 templates/index.html:369
+msgid "Neden Ortaya Çıktı"
+msgstr "Reason for Emergence"
+
+#: templates/index.html:330 templates/index.html:370
+msgid "Kullanım Alanları"
+msgstr "Usage Areas"
+
+#: templates/index.html:331 templates/index.html:371
+msgid "Çalışma Mantığı"
+msgstr "Working Principle"
+
+#: templates/index.html:332 templates/index.html:372
+msgid "Güvenlik Seviyesi"
+msgstr "Security Level"
+
+#: templates/index.html:333 templates/index.html:373
+msgid "Genel Performans Özellikleri"
+msgstr "General Performance Characteristics"
+
+#: templates/index.html:334 templates/index.html:374
+msgid "Performansı Etkileyen Değişkenler"
+msgstr "Variables Affecting Performance"
+
+#: templates/index.html:339
+msgid "Algoritma Seçimi İçin Pratik Öneriler"
+msgstr "Practical Recommendations for Algorithm Selection"
+
+#: templates/index.html:342
+msgid ""
+"Doğru kriptografik algoritma seçimi, projenizin özel ihtiyaçlarına bağlıdır. "
+"Güvenlik gereksinimleri, beklenen performans, mevcut donanım kaynakları, "
+"geliştirme ve entegrasyon kolaylığı gibi birçok faktör bu seçimde rol oynar. "
+"Özellikle veri hassasiyeti yüksek ve ölçeklenebilir sistemlerde, güncel ve "
+"kanıtlanmış algoritmaların tercih edilmesi kritik öneme sahiptir."
+msgstr ""
+"Choosing the right cryptographic algorithm depends on the specific needs of "
+"your project. Many factors play a role in this decision, such as security "
+"requirements, expected performance, available hardware resources, and ease "
+"of development and integration. Especially in systems with high data "
+"sensitivity and scalability requirements, choosing current and proven "
+"algorithms is critically important."
+
+#: templates/index.html:346
+msgid "özellikle AES-256 GCM modu"
+msgstr "especially AES-256 GCM mode"
+
+#: templates/index.html:347
+msgid ""
+"Yüksek hacimli verilerin hem gizliliğini hem de bütünlüğünü sağlamak için "
+"günümüzün altın standardıdır. Hızlıdır ve yaygın donanım desteğine sahiptir."
+msgstr ""
+"It is today's gold standard for ensuring both confidentiality and integrity "
+"of high-volume data. It is fast and has widespread hardware support."
+
+#: templates/index.html:350
+msgid ""
+"Anahtar değişimi ve dijital imzalar için hala yaygın olsa da, özellikle "
+"yüksek anahtar boyutlarında (örn. 4096-bit) performansı simetrik "
+"algoritmalara göre düşüktür. Mümkünse, daha modern ve verimli olan ECC "
+"(Eliptik Eğri Kriptografisi) tercih edilmelidir."
+msgstr ""
+"While still common for key exchange and digital signatures, its performance, "
+"especially with large key sizes (e.g., 4096-bit), is lower compared to "
+"symmetric algorithms. If possible, the more modern and efficient ECC "
+"(Elliptic Curve Cryptography) should be preferred."
+
+#: templates/index.html:354
+msgid ""
+"RSA ile benzer güvenlik seviyelerini çok daha küçük anahtar boyutlarıyla "
+"sunar, bu da onu özellikle mobil cihazlar, IoT ve kaynak kısıtlı ortamlar "
+"için ideal kılar. Anahtar üretimi ve imzalama işlemleri genellikle RSA'dan "
+"daha hızlıdır."
+msgstr ""
+"It offers security levels similar to RSA with much smaller key sizes, making "
+"it ideal especially for mobile devices, IoT, and resource-constrained "
+"environments. Key generation and signing operations are generally faster "
+"than RSA."
+
+#: templates/index.html:358
+msgid ""
+"DES, günümüz standartlarına göre güvensiz kabul edilir ve kesinlikle "
+"kullanılmamalıdır. 3DES, DES'e göre daha güvenli olsa da AES'e göre "
+"yavaştır ve genellikle sadece eski sistemlerle uyumluluk için kullanılır. "
+"Yeni projelerde AES tercih edilmelidir."
+msgstr ""
+"DES is considered insecure by today's standards and should absolutely not be "
+"used. While 3DES is more secure than DES, it is slower than AES and is "
+"generally used only for compatibility with older systems. AES should be "
+"preferred for new projects."
+
+#: templates/index.html:362
+msgid ""
+"AES kadar yaygın olmasa da, özellikle belirli uygulamalarda hızlı bir "
+"alternatif olabilir. Ancak, küçük blok boyutu (64-bit) bazı modern "
+"protokoller için dezavantaj oluşturabilir."
+msgstr ""
+"Although not as common as AES, it can be a fast alternative, especially in "
+"certain applications. However, its small block size (64-bit) can be a "
+"disadvantage for some modern protocols."
+
+#: templates/index.html:366
+msgid "Hashing Algoritmaları"
+msgstr "Hashing Algorithms"
+
+#: templates/index.html:367
+msgid ""
+"Veri bütünlüğü ve parola saklama için SHA-256, SHA-384, SHA-512 veya SHA-3 "
+"ailesinden algoritmalar tercih edilmelidir. MD5 ve SHA-1 algoritmaları "
+"çarpışma (collision) saldırılarına karşı zayıf oldukları için güvenlik "
+"açısından kritik uygulamalarda kesinlikle kullanılmamalıdır."
+msgstr ""
+"For data integrity and password storage, algorithms from the SHA-256, "
+"SHA-384, SHA-512, or SHA-3 families should be preferred. MD5 and SHA-1 "
+"algorithms should absolutely not be used in security-critical applications "
+"as they are weak against collision attacks."
+
+#: templates/index.html:372
+msgid "Algoritma Çalışma Sayısı Simülasyonu"
+msgstr "Algorithm Run Count Simulation"
+
+#: templates/index.html:373
+msgid ""
+"Belirli bir süre içinde her bir algoritma konfigürasyonunun yaklaşık kaç kez "
+"çalışabileceğini hesaplayın. Bu, farklı algoritmaların pratik işlem "
+"hızlarını karşılaştırmanıza yardımcı olur."
+msgstr ""
+"Calculate approximately how many times each algorithm configuration can run "
+"within a specific period. This helps you compare the practical processing "
+"speeds of different algorithms."
+
+#: templates/index.html:394
+msgid "Süre Giriniz"
+msgstr "Enter Duration"
+
+#: templates/index.html:411
+msgid "© 2025 Kriptografi Karşılaştırma Uygulaması."
+msgstr "© 2025 Cryptography Comparison Application."
