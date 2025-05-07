@@ -324,6 +324,7 @@ def index():
         "simRunsUnit": _("kez"),
         "invalidDurationError": _("Lütfen geçerli pozitif bir süre giriniz."),
         "noPerfDataError": _("Performans verisi yok veya geçersiz."),
+        "rawLibraryMissing": _("Kütüphane eksik"),
         "libraryMissingError": _("Kütüphane eksik, hesaplanamadı."),
         "infiniteRunsWarning": _("Sonsuz (performans süresi sıfır)."),
         "negativePerfError": _("Geçersiz performans verisi (negatif)."),
@@ -343,6 +344,7 @@ def index():
         "avgPerfColumn": _("Ort. Performans (s)"),
         "stdDevColumn": _("Std. Sapma (s)"),
         "fastestConfigColumn": _("En Hızlı Konfigürasyon"),
+        "enterDurationPlaceholder": _("Süre Giriniz"),
     }
 
     return render_template(
